@@ -24,7 +24,7 @@ def user_register(request):
             return redirect("login")
     else:
         register_form = forms.RegistrationForm()
-        return render(
+    return render(
             request, "register.html", {"form": register_form, "type": "Sign Up"}
         )
 
@@ -45,7 +45,7 @@ def user_login(request):
                 return redirect("login")
     else:
         login_form = AuthenticationForm()
-        return render(request, "register.html", {"form": login_form, "type": "Log In"})
+    return render(request, "register.html", {"form": login_form, "type": "Log In"})
 
 
 @login_required
@@ -64,7 +64,7 @@ def pass_change(request):
             return redirect("profile")
     else:
         pass_form = PasswordChangeForm(user=request.user)
-        return render(
+    return render(
             request, "register.html", {"form": pass_form, "type": "Change Password"}
         )
 
@@ -80,7 +80,7 @@ def pass_change2(request):
             return redirect("profile")
     else:
         pass_form = SetPasswordForm(user=request.user)
-        return render(
+    return render(
             request, "register.html", {"form": pass_form, "type": "Change Password"}
         )
 
