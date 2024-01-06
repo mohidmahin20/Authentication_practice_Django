@@ -1,0 +1,6 @@
+{% extends 'base.html' %}
+{% block content %}
+  <h1 class="text-center">Profile page</h1>
+  <h3 class="text-center"><a href="{% url 'pass_change' %}">Change your password with old password</a></h3>
+  <h3 class="text-center"><a href="{% url 'pass_change2' %}">Change your password without old password</a></h3>
+{% endblock %}
